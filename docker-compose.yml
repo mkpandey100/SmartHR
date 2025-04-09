@@ -8,8 +8,8 @@ services:
       - "8091:90"
     depends_on:
       - smarthr.identityservice.api
-      # - smarthr.employeeservice.api
-      # - smarthr.payrollservice.api
+      - smarthr.employeeservice.api
+      - smarthr.payrollservice.api
 
   smarthr.identityservice.api:
     image: ${DOCKER_REGISTRY-}smarthridentityserviceapi
