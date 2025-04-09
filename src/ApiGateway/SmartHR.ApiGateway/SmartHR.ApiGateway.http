@@ -1,0 +1,6 @@
+@SmartHR.ApiGateway_HostAddress = http://localhost:5254
+
+GET {{SmartHR.ApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

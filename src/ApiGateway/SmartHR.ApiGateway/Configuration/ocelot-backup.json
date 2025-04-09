@@ -1,0 +1,46 @@
+﻿//{
+//  "Routes": [],
+//  "GlobalConfiguration": {
+//    "BaseUrl": "https://localhost:7249"
+//  }
+//}
+
+//{
+//  "Routes": [
+//    {
+//      "DownstreamPathTemplate": "/WeatherForecast",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "smarthr.identityservice.api",
+//          "Port": 5001
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/identity/WeatherForecast",
+//      "UpstreamHttpMethod": [ "GET", "POST" ]
+//    }
+//  ],
+//  "GlobalConfiguration": {
+//    "BaseUrl": "http://localhost:5000"
+//  }
+//}
+
+//{
+//  "Routes": [
+//    {
+//      "DownstreamPathTemplate": "/WeatherForecast",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "smarthr.identityservice.api",
+//          "Port": 90
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/identity/WeatherForecast",
+//      "UpstreamHttpMethod": [ "GET", "POST" ]
+//    }
+//  ],
+//  "GlobalConfiguration": {
+//    "BaseUrl": "http://localhost:8091"
+//  }
+//}

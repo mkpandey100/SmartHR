@@ -1,0 +1,36 @@
+services:
+  smarthr.gateway.api:
+    image: ${DOCKER_REGISTRY-}smarthrgatewayapi
+    build:
+      context: .
+      dockerfile: src\ApiGateway\SmartHR.ApiGateway\Dockerfile
+    ports:
+      - "8091:90"
+    depends_on:
+      - smarthr.identityservice.api
+      # - smarthr.employeeservice.api
+      # - smarthr.payrollservice.api
+
+  smarthr.identityservice.api:
+    image: ${DOCKER_REGISTRY-}smarthridentityserviceapi
+    build:
+      context: .
+      dockerfile: src\Services\IdentityService\SmartHR.IdentityService.API\Dockerfile
+    ports:
+      - "8093:90"
+
+  smarthr.employeeservice.api:
+    image: ${DOCKER_REGISTRY-}smarthremployeeserviceapi
+    build:
+      context: .
+      dockerfile: src\Services\EmployeeService\SmartHR.EmployeeService.API\Dockerfile
+    ports:
+      - "8092:90"
+
+  smarthr.payrollservice.api:
+    image: ${DOCKER_REGISTRY-}smarthrpayrollserviceapi
+    build:
+      context: .
+      dockerfile: src\Services\PayrollService\SmartHR.PayrollService.API\Dockerfile
+    ports:
+      - "8094:90"
